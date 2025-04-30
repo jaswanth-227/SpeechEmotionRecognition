@@ -84,10 +84,3 @@ To test model robustness, the trained models were also evaluated on **external a
 - Thanks to the Kaggle community for their insightful notebooks and discussions
 
 ---
-
-## 📬 Contact
-
-Feel free to reach out or connect regarding this project:
-
-**Author:** Sai Manoj  
-**Kaggle:** [saimanoj025](https://www.kaggle.com/saimanoj025)
