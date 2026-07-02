@@ -1,0 +1,403 @@
+<svg width="1000" height="1420" viewBox="0 0 1000 1420" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, Helvetica, sans-serif">
+
+<defs>
+  <linearGradient id="gradBlue" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#EAF3FD"/><stop offset="100%" stop-color="#BEDAF7"/>
+  </linearGradient>
+  <linearGradient id="gradGreen" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#E8F7EC"/><stop offset="100%" stop-color="#BFE6CC"/>
+  </linearGradient>
+  <linearGradient id="gradTeal" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#E1F5F3"/><stop offset="100%" stop-color="#B7E4DE"/>
+  </linearGradient>
+  <linearGradient id="gradOrange" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#FDF0E0"/><stop offset="100%" stop-color="#F8D2A0"/>
+  </linearGradient>
+  <linearGradient id="gradPurple" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#F0E9FB"/><stop offset="100%" stop-color="#D6C2F0"/>
+  </linearGradient>
+  <linearGradient id="gradGray" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#FBFCFD"/><stop offset="100%" stop-color="#EEF1F4"/>
+  </linearGradient>
+  <linearGradient id="gradRed" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#FDEBEA"/><stop offset="100%" stop-color="#F3C3C0"/>
+  </linearGradient>
+  <linearGradient id="gradYellow" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#FFF7DE"/><stop offset="100%" stop-color="#FBE8A6"/>
+  </linearGradient>
+
+  <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="2" stdDeviation="2.2" flood-color="#1F2937" flood-opacity="0.18"/>
+  </filter>
+
+  <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#4B5563"/>
+  </marker>
+  <marker id="arrowSmall" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.3" markerHeight="4.3" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+  </marker>
+
+  <style>
+    .title{font-family:Georgia,'Times New Roman',serif;font-weight:700;fill:#1F2937;}
+    .caption{font-style:italic;fill:#4B5563;}
+    .sectionLabel{font-weight:700;fill:#374151;}
+    .modTitle{font-weight:700;fill:#1F2937;}
+    .modSub{fill:#4B5563;}
+    .flow{stroke:#4B5563;stroke-width:1.6;fill:none;marker-end:url(#arrow);}
+    .flowSmall{stroke:#374151;stroke-width:1;fill:none;marker-end:url(#arrowSmall);}
+    .box{stroke-width:1.4;}
+  </style>
+</defs>
+
+<rect x="0" y="0" width="1000" height="1420" fill="#FFFFFF"/>
+
+<!-- ============ TITLE ============ -->
+<text x="500" y="30" text-anchor="middle" class="title" font-size="22">Speech Emotion Recognition Using Machine Learning</text>
+<text x="500" y="50" text-anchor="middle" font-size="11" fill="#6B7280" font-style="italic">Feature-driven multi-branch classification framework</text>
+
+<!-- ============ INPUT ============ -->
+<rect x="385" y="62" width="230" height="44" rx="10" class="box" fill="url(#gradBlue)" stroke="#4A7FC1" filter="url(#softShadow)"/>
+<g transform="translate(398,74)" stroke="#3B5C8A" stroke-width="1.6" fill="none" stroke-linecap="round">
+  <line x1="0" y1="10" x2="0" y2="10"/>
+  <line x1="0" y1="8" x2="0" y2="12"/>
+  <line x1="5" y1="4" x2="5" y2="16"/>
+  <line x1="10" y1="0" x2="10" y2="20"/>
+  <line x1="15" y1="6" x2="15" y2="14"/>
+  <line x1="20" y1="2" x2="20" y2="18"/>
+  <line x1="25" y1="7" x2="25" y2="13"/>
+</g>
+<text x="440" y="82" font-size="10.5" font-weight="600" fill="#1F3A5F">Speech Audio Input</text>
+<text x="440" y="95" font-size="9.5" fill="#3B5C8A">(.wav file)</text>
+<path d="M500,106 L500,134" class="flow"/>
+
+<!-- ============ PREPROCESSING ============ -->
+<rect x="40" y="134" width="920" height="168" rx="16" fill="url(#gradGray)" stroke="#9CA3AF" stroke-dasharray="6,4" filter="url(#softShadow)"/>
+<text x="56" y="156" class="sectionLabel" font-size="14.5">Audio Preprocessing Pipeline</text>
+
+<!-- Row 1 -->
+<g>
+  <rect x="60" y="168" width="270" height="46" rx="10" class="box" fill="url(#gradBlue)" stroke="#4A7FC1" filter="url(#softShadow)"/>
+  <path d="M75,191 Q82,182 89,191 Q96,200 103,191" stroke="#3B5C8A" stroke-width="1.4" fill="none"/>
+  <text x="120" y="188" font-size="10.5" font-weight="700" fill="#1F3A5F">Noise Reduction</text>
+  <text x="120" y="200" font-size="8" fill="#3B5C8A">Spectral subtraction</text>
+</g>
+<g>
+  <rect x="365" y="168" width="270" height="46" rx="10" class="box" fill="url(#gradBlue)" stroke="#4A7FC1" filter="url(#softShadow)"/>
+  <path d="M380,183 L386,199 L392,183 L398,199 L404,183" stroke="#3B5C8A" stroke-width="1.3" fill="none"/>
+  <text x="418" y="188" font-size="10.5" font-weight="700" fill="#1F3A5F">Silence Removal</text>
+  <text x="418" y="200" font-size="8" fill="#3B5C8A">Energy-based VAD</text>
+</g>
+<g>
+  <rect x="670" y="168" width="270" height="46" rx="10" class="box" fill="url(#gradBlue)" stroke="#4A7FC1" filter="url(#softShadow)"/>
+  <path d="M685,199 L700,183 L715,199" stroke="#3B5C8A" stroke-width="1.4" fill="none"/>
+  <text x="725" y="188" font-size="10.5" font-weight="700" fill="#1F3A5F">Pre-emphasis Filter</text>
+  <text x="725" y="200" font-size="8" fill="#3B5C8A">High-frequency boost</text>
+</g>
+
+<!-- connectors row1 -->
+<path d="M330,191 L365,191" class="flow"/>
+<path d="M635,191 L670,191" class="flow"/>
+<path d="M905,214 L905,224" class="flow"/>
+
+<!-- Row 2 (snake, right to left) -->
+<g>
+  <rect x="670" y="224" width="270" height="46" rx="10" class="box" fill="url(#gradBlue)" stroke="#4A7FC1" filter="url(#softShadow)"/>
+  <path d="M685,247 L692,240 L699,254 L706,240 L713,247" stroke="#3B5C8A" stroke-width="1.3" fill="none"/>
+  <text x="725" y="244" font-size="10.5" font-weight="700" fill="#1F3A5F">Framing</text>
+  <text x="725" y="256" font-size="8" fill="#3B5C8A">25 ms frames, 10 ms hop</text>
+</g>
+<g>
+  <rect x="365" y="224" width="270" height="46" rx="10" class="box" fill="url(#gradBlue)" stroke="#4A7FC1" filter="url(#softShadow)"/>
+  <path d="M380,254 Q392,236 404,254" stroke="#3B5C8A" stroke-width="1.4" fill="none"/>
+  <text x="418" y="244" font-size="10.5" font-weight="700" fill="#1F3A5F">Windowing</text>
+  <text x="418" y="256" font-size="8" fill="#3B5C8A">Hamming window</text>
+</g>
+<g>
+  <rect x="60" y="224" width="270" height="46" rx="10" class="box" fill="url(#gradBlue)" stroke="#4A7FC1" filter="url(#softShadow)"/>
+  <path d="M75,240 L103,240 M75,254 L103,254" stroke="#3B5C8A" stroke-width="1.3"/>
+  <path d="M79,236 L79,258 M99,236 L99,258" stroke="#3B5C8A" stroke-width="1.3"/>
+  <text x="120" y="244" font-size="10.5" font-weight="700" fill="#1F3A5F">Amplitude Normalization</text>
+  <text x="120" y="256" font-size="8" fill="#3B5C8A">Peak / RMS scaling</text>
+</g>
+<path d="M670,247 L635,247" class="flow"/>
+<path d="M365,247 L330,247" class="flow"/>
+
+<path d="M195,270 C195,292 300,300 415,312" class="flow"/>
+<rect x="415" y="312" width="170" height="26" rx="8" fill="#FFFFFF" stroke="#6B7280" stroke-width="1.3"/>
+<text x="500" y="329" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1F2937">Clean Audio Signal</text>
+<path d="M500,338 L500,350" class="flow"/>
+
+<!-- ============ FEATURE EXTRACTION ============ -->
+<rect x="40" y="350" width="920" height="300" rx="16" fill="url(#gradGray)" stroke="#9CA3AF" stroke-dasharray="6,4" filter="url(#softShadow)"/>
+<text x="56" y="372" class="sectionLabel" font-size="14.5">Feature Extraction Module — Three Parallel Branches</text>
+
+<!-- dividers -->
+<line x1="345" y1="385" x2="345" y2="640" stroke="#D1D5DB" stroke-width="1" stroke-dasharray="3,3"/>
+<line x1="650" y1="385" x2="650" y2="640" stroke="#D1D5DB" stroke-width="1" stroke-dasharray="3,3"/>
+
+<!-- Branch 1: MFCC -->
+<g>
+  <text x="195" y="396" text-anchor="middle" font-size="12" font-weight="700" fill="#1F3A5F">Branch 1 — MFCC Features</text>
+  <rect x="60" y="404" width="270" height="26" rx="7" fill="url(#gradBlue)" stroke="#4A7FC1"/>
+  <text x="195" y="421" text-anchor="middle" font-size="9.5" font-weight="600" fill="#1F3A5F">FFT</text>
+  <path d="M195,430 L195,438" class="flowSmall"/>
+  <rect x="60" y="438" width="270" height="26" rx="7" fill="url(#gradBlue)" stroke="#4A7FC1"/>
+  <text x="195" y="455" text-anchor="middle" font-size="9.5" font-weight="600" fill="#1F3A5F">Mel Filter Bank</text>
+  <path d="M195,464 L195,472" class="flowSmall"/>
+  <rect x="60" y="472" width="270" height="26" rx="7" fill="url(#gradBlue)" stroke="#4A7FC1"/>
+  <text x="195" y="489" text-anchor="middle" font-size="9.5" font-weight="600" fill="#1F3A5F">Log Energy</text>
+  <path d="M195,498 L195,506" class="flowSmall"/>
+  <rect x="60" y="506" width="270" height="26" rx="7" fill="url(#gradBlue)" stroke="#4A7FC1"/>
+  <text x="195" y="523" text-anchor="middle" font-size="9.5" font-weight="600" fill="#1F3A5F">DCT</text>
+  <path d="M195,532 L195,545" class="flowSmall"/>
+  <rect x="60" y="545" width="270" height="34" rx="9" class="box" fill="url(#gradBlue)" stroke="#2F5FA3" filter="url(#softShadow)"/>
+  <text x="195" y="566" text-anchor="middle" font-size="10.5" font-weight="700" fill="#153964">40 MFCC Coefficients</text>
+</g>
+
+<!-- Branch 2: Chroma -->
+<g>
+  <text x="500" y="396" text-anchor="middle" font-size="12" font-weight="700" fill="#1E5B34">Branch 2 — Chroma Features</text>
+  <rect x="365" y="404" width="270" height="26" rx="7" fill="url(#gradGreen)" stroke="#3F9B5C"/>
+  <text x="500" y="421" text-anchor="middle" font-size="9.5" font-weight="600" fill="#1E5B34">Frequency Mapping</text>
+  <path d="M500,430 L500,438" class="flowSmall"/>
+  <rect x="365" y="438" width="270" height="26" rx="7" fill="url(#gradGreen)" stroke="#3F9B5C"/>
+  <text x="500" y="455" text-anchor="middle" font-size="9.5" font-weight="600" fill="#1E5B34">12 Chroma Bins</text>
+
+  <!-- chroma wheel decorative icon -->
+  <g transform="translate(500,505)">
+    <circle r="34" fill="none" stroke="#3F9B5C" stroke-width="1"/>
+    <g stroke="#BFE6CC" stroke-width="1">
+      <line x1="0" y1="-34" x2="0" y2="34"/><line x1="-34" y1="0" x2="34" y2="0"/>
+      <line x1="-24" y1="-24" x2="24" y2="24"/><line x1="-24" y1="24" x2="24" y2="-24"/>
+      <line x1="-12" y1="-32" x2="12" y2="32"/><line x1="12" y1="-32" x2="-12" y2="32"/>
+    </g>
+    <circle r="4" fill="#3F9B5C"/>
+  </g>
+  <text x="500" y="545" text-anchor="middle" font-size="7.5" fill="#1E5B34">12-bin pitch-class wheel</text>
+
+  <rect x="365" y="545" width="270" height="34" rx="9" class="box" fill="url(#gradGreen)" stroke="#2E7A42" filter="url(#softShadow)"/>
+  <text x="500" y="566" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1E5B34">Chroma Vector (12-D)</text>
+</g>
+
+<!-- Branch 3: Spectral -->
+<g>
+  <text x="805" y="396" text-anchor="middle" font-size="12" font-weight="700" fill="#7A431A">Branch 3 — Spectral Features</text>
+  <rect x="670" y="404" width="270" height="24" rx="6" fill="url(#gradOrange)" stroke="#E08E3E"/>
+  <text x="805" y="420" text-anchor="middle" font-size="9" font-weight="600" fill="#7A431A">Spectral Centroid</text>
+  <path d="M805,428 L805,434" class="flowSmall"/>
+  <rect x="670" y="434" width="270" height="24" rx="6" fill="url(#gradOrange)" stroke="#E08E3E"/>
+  <text x="805" y="450" text-anchor="middle" font-size="9" font-weight="600" fill="#7A431A">Spectral Bandwidth</text>
+  <path d="M805,458 L805,464" class="flowSmall"/>
+  <rect x="670" y="464" width="270" height="24" rx="6" fill="url(#gradOrange)" stroke="#E08E3E"/>
+  <text x="805" y="480" text-anchor="middle" font-size="9" font-weight="600" fill="#7A431A">Spectral Roll-off</text>
+  <path d="M805,488 L805,494" class="flowSmall"/>
+  <rect x="670" y="494" width="270" height="24" rx="6" fill="url(#gradOrange)" stroke="#E08E3E"/>
+  <text x="805" y="510" text-anchor="middle" font-size="9" font-weight="600" fill="#7A431A">Zero Crossing Rate</text>
+  <path d="M805,518 L805,524" class="flowSmall"/>
+  <rect x="670" y="524" width="270" height="24" rx="6" fill="url(#gradOrange)" stroke="#E08E3E"/>
+  <text x="805" y="540" text-anchor="middle" font-size="9" font-weight="600" fill="#7A431A">RMS Energy</text>
+  <path d="M805,548 L805,552" class="flowSmall"/>
+  <rect x="670" y="552" width="270" height="27" rx="9" class="box" fill="url(#gradOrange)" stroke="#C86A1F" filter="url(#softShadow)"/>
+  <text x="805" y="570" text-anchor="middle" font-size="9.7" font-weight="700" fill="#7A431A">Spectral Feature Set (5-D)</text>
+</g>
+
+<!-- convergence to concat node -->
+<path d="M195,579 C 195,600 350,608 460,614" class="flow"/>
+<path d="M500,579 L500,610" class="flow"/>
+<path d="M805,579 C 805,600 650,608 540,614" class="flow"/>
+<rect x="440" y="614" width="120" height="28" rx="14" fill="url(#gradPurple)" stroke="#8A63C9" filter="url(#softShadow)"/>
+<text x="500" y="632" text-anchor="middle" font-size="10" font-weight="700" fill="#4B2E83">Concatenate</text>
+
+<path d="M500,650 L500,668" class="flow"/>
+
+<!-- ============ FEATURE VECTOR ============ -->
+<text x="500" y="666" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1F2937"></text>
+<text x="500" y="678" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1F2937">Feature Vector (57-D)</text>
+<rect x="250" y="686" width="500" height="30" rx="8" fill="#FFFFFF" stroke="#6B7280" stroke-width="1.3" filter="url(#softShadow)"/>
+<rect x="253" y="689" width="345" height="24" rx="4" fill="url(#gradBlue)" stroke="#4A7FC1"/>
+<rect x="601" y="689" width="103" height="24" rx="4" fill="url(#gradGreen)" stroke="#3F9B5C"/>
+<rect x="707" y="689" width="40" height="24" rx="4" fill="url(#gradOrange)" stroke="#E08E3E"/>
+<text x="425" y="705" text-anchor="middle" font-size="8.5" font-weight="600" fill="#1F3A5F">MFCC (40)</text>
+<text x="652" y="705" text-anchor="middle" font-size="8" font-weight="600" fill="#1E5B34">Chroma (12)</text>
+<text x="727" y="705" text-anchor="middle" font-size="6.5" font-weight="600" fill="#7A431A">Spec.(5)</text>
+<path d="M500,716 L500,730" class="flow"/>
+
+<!-- ============ CLASSIFIERS ============ -->
+<rect x="40" y="730" width="920" height="180" rx="16" fill="url(#gradGray)" stroke="#9CA3AF" stroke-dasharray="6,4" filter="url(#softShadow)"/>
+<text x="56" y="752" class="sectionLabel" font-size="14.5">Machine Learning Models — Parallel Classifiers</text>
+
+<path d="M425,730 L200,765" class="flow"/>
+<path d="M500,730 L500,765" class="flow"/>
+<path d="M575,730 L800,765" class="flow"/>
+
+<!-- Random Forest -->
+<g>
+  <rect x="70" y="765" width="260" height="120" rx="12" class="box" fill="url(#gradGreen)" stroke="#3F9B5C" filter="url(#softShadow)"/>
+  <g transform="translate(90,780)" stroke="#1E5B34" stroke-width="1.3" fill="none">
+    <line x1="10" y1="30" x2="10" y2="10"/><line x1="10" y1="18" x2="2" y2="4"/><line x1="10" y1="18" x2="18" y2="4"/>
+    <line x1="35" y1="30" x2="35" y2="6"/><line x1="35" y1="16" x2="27" y2="2"/><line x1="35" y1="16" x2="43" y2="2"/>
+    <line x1="60" y1="30" x2="60" y2="12"/><line x1="60" y1="20" x2="52" y2="6"/><line x1="60" y1="20" x2="68" y2="6"/>
+  </g>
+  <text x="200" y="800" text-anchor="middle" font-size="12" font-weight="700" fill="#1E5B34">Random Forest</text>
+  <text x="200" y="815" text-anchor="middle" font-size="8.5" fill="#2E7A42">Ensemble of Decision Trees</text>
+  <text x="200" y="828" text-anchor="middle" font-size="8.5" fill="#2E7A42">(bagging, majority vote)</text>
+  <rect x="90" y="838" width="220" height="30" rx="6" fill="#FFFFFF" stroke="#3F9B5C" stroke-width="1"/>
+  <text x="200" y="857" text-anchor="middle" font-size="8" fill="#1E5B34">n_estimators = 300, Gini criterion</text>
+</g>
+
+<!-- SVM -->
+<g>
+  <rect x="370" y="765" width="260" height="120" rx="12" class="box" fill="url(#gradBlue)" stroke="#4A7FC1" filter="url(#softShadow)"/>
+  <g transform="translate(400,782)">
+    <line x1="0" y1="30" x2="70" y2="0" stroke="#1F3A5F" stroke-width="1.4"/>
+    <circle cx="14" cy="8" r="3.4" fill="#4A7FC1"/><circle cx="28" cy="20" r="3.4" fill="#4A7FC1"/><circle cx="8" cy="24" r="3.4" fill="#4A7FC1"/>
+    <circle cx="46" cy="6" r="3.4" fill="#F4A261" stroke="#C86A1F"/><circle cx="58" cy="16" r="3.4" fill="#F4A261" stroke="#C86A1F"/><circle cx="64" cy="26" r="3.4" fill="#F4A261" stroke="#C86A1F"/>
+  </g>
+  <text x="500" y="800" text-anchor="middle" font-size="12" font-weight="700" fill="#1F3A5F">Support Vector Machine</text>
+  <text x="500" y="815" text-anchor="middle" font-size="8.5" fill="#3B5C8A">Max-margin hyperplane separation</text>
+  <text x="500" y="828" text-anchor="middle" font-size="8.5" fill="#3B5C8A">(RBF kernel)</text>
+  <rect x="390" y="838" width="220" height="30" rx="6" fill="#FFFFFF" stroke="#4A7FC1" stroke-width="1"/>
+  <text x="500" y="857" text-anchor="middle" font-size="8" fill="#1F3A5F">C = 10, γ = scale</text>
+</g>
+
+<!-- XGBoost -->
+<g>
+  <rect x="670" y="765" width="260" height="120" rx="12" class="box" fill="url(#gradOrange)" stroke="#E08E3E" filter="url(#softShadow)"/>
+  <g transform="translate(695,786)" stroke="#7A431A" stroke-width="1.4" fill="none">
+    <path d="M0,26 L14,26 L14,18 L28,18 L28,8 L42,8 L42,0" marker-end="url(#arrowSmall)"/>
+    <path d="M0,26 Q10,10 20,26" opacity="0.35"/>
+  </g>
+  <text x="800" y="800" text-anchor="middle" font-size="12" font-weight="700" fill="#7A431A">XGBoost</text>
+  <text x="800" y="815" text-anchor="middle" font-size="8.5" fill="#8A4E15">Gradient-Boosted Decision Trees</text>
+  <text x="800" y="828" text-anchor="middle" font-size="8.5" fill="#8A4E15">(sequential error correction)</text>
+  <rect x="690" y="838" width="220" height="30" rx="6" fill="#FFFFFF" stroke="#E08E3E" stroke-width="1"/>
+  <text x="800" y="857" text-anchor="middle" font-size="8" fill="#7A431A">lr = 0.1, max_depth = 6, n = 300</text>
+</g>
+
+<!-- ============ PREDICTION MODULE ============ -->
+<rect x="40" y="910" width="920" height="120" rx="16" fill="url(#gradGray)" stroke="#9CA3AF" stroke-dasharray="6,4" filter="url(#softShadow)"/>
+<text x="56" y="932" class="sectionLabel" font-size="14.5">Prediction Module — Class Probability Scores</text>
+
+<path d="M200,885 L200,945" class="flow"/>
+<path d="M500,885 L500,945" class="flow"/>
+<path d="M800,885 L800,945" class="flow"/>
+
+<!-- mini bar charts -->
+<g transform="translate(140,945)">
+  <line x1="0" y1="60" x2="120" y2="60" stroke="#9CA3AF" stroke-width="1"/>
+  <rect x="6" y="30" width="14" height="30" fill="url(#gradGreen)" stroke="#3F9B5C"/>
+  <rect x="26" y="18" width="14" height="42" fill="url(#gradGreen)" stroke="#3F9B5C"/>
+  <rect x="46" y="40" width="14" height="20" fill="url(#gradGreen)" stroke="#3F9B5C"/>
+  <rect x="66" y="8" width="14" height="52" fill="url(#gradGreen)" stroke="#2E7A42"/>
+  <rect x="86" y="46" width="14" height="14" fill="url(#gradGreen)" stroke="#3F9B5C"/>
+  <text x="60" y="72" text-anchor="middle" font-size="7.5" fill="#1E5B34">P(RF)</text>
+</g>
+<g transform="translate(440,945)">
+  <line x1="0" y1="60" x2="120" y2="60" stroke="#9CA3AF" stroke-width="1"/>
+  <rect x="6" y="24" width="14" height="36" fill="url(#gradBlue)" stroke="#4A7FC1"/>
+  <rect x="26" y="12" width="14" height="48" fill="url(#gradBlue)" stroke="#2F5FA3"/>
+  <rect x="46" y="36" width="14" height="24" fill="url(#gradBlue)" stroke="#4A7FC1"/>
+  <rect x="66" y="44" width="14" height="16" fill="url(#gradBlue)" stroke="#4A7FC1"/>
+  <rect x="86" y="30" width="14" height="30" fill="url(#gradBlue)" stroke="#4A7FC1"/>
+  <text x="60" y="72" text-anchor="middle" font-size="7.5" fill="#1F3A5F">P(SVM)</text>
+</g>
+<g transform="translate(740,945)">
+  <line x1="0" y1="60" x2="120" y2="60" stroke="#9CA3AF" stroke-width="1"/>
+  <rect x="6" y="20" width="14" height="40" fill="url(#gradOrange)" stroke="#E08E3E"/>
+  <rect x="26" y="34" width="14" height="26" fill="url(#gradOrange)" stroke="#E08E3E"/>
+  <rect x="46" y="6" width="14" height="54" fill="url(#gradOrange)" stroke="#C86A1F"/>
+  <rect x="66" y="42" width="14" height="18" fill="url(#gradOrange)" stroke="#E08E3E"/>
+  <rect x="86" y="38" width="14" height="22" fill="url(#gradOrange)" stroke="#E08E3E"/>
+  <text x="60" y="72" text-anchor="middle" font-size="7.5" fill="#7A431A">P(XGB)</text>
+</g>
+
+<path d="M200,1015 C 200,1035 400,1042 480,1046" class="flow"/>
+<path d="M500,1015 L500,1046" class="flow"/>
+<path d="M800,1015 C 800,1035 600,1042 520,1046" class="flow"/>
+<rect x="420" y="1046" width="160" height="28" rx="14" fill="url(#gradPurple)" stroke="#8A63C9" filter="url(#softShadow)"/>
+<text x="500" y="1064" text-anchor="middle" font-size="10" font-weight="700" fill="#4B2E83">Ensemble Voting</text>
+<path d="M500,1074 L500,1090" class="flow"/>
+
+<!-- ============ FINAL EMOTION PREDICTION ============ -->
+<rect x="40" y="1090" width="920" height="300" rx="16" fill="url(#gradGray)" stroke="#9CA3AF" stroke-dasharray="6,4" filter="url(#softShadow)"/>
+<text x="56" y="1113" class="sectionLabel" font-size="14.5">Final Emotion Prediction</text>
+
+<!-- Row 1 faces -->
+<!-- Happy -->
+<g transform="translate(160,1170)">
+  <rect x="-90" y="-45" width="180" height="105" rx="10" fill="url(#gradYellow)" stroke="#D9A63C"/>
+  <circle cx="0" cy="-3" r="30" fill="#FFF7DE" stroke="#D9A63C" stroke-width="1.3"/>
+  <circle cx="-10" cy="-10" r="2.6" fill="#7A5E1A"/><circle cx="10" cy="-10" r="2.6" fill="#7A5E1A"/>
+  <path d="M-12,4 Q0,16 12,4" stroke="#7A5E1A" stroke-width="2" fill="none"/>
+  <text x="0" y="45" text-anchor="middle" font-size="10.5" font-weight="700" fill="#6B551A">Happy</text>
+</g>
+<!-- Sad -->
+<g transform="translate(370,1170)">
+  <rect x="-90" y="-45" width="180" height="105" rx="10" fill="url(#gradBlue)" stroke="#4A7FC1"/>
+  <circle cx="0" cy="-3" r="30" fill="#EAF3FD" stroke="#4A7FC1" stroke-width="1.3"/>
+  <circle cx="-10" cy="-8" r="2.6" fill="#1F3A5F"/><circle cx="10" cy="-8" r="2.6" fill="#1F3A5F"/>
+  <path d="M-13,-16 Q-10,-19 -6,-17" stroke="#1F3A5F" stroke-width="1.4" fill="none"/>
+  <path d="M13,-16 Q10,-19 6,-17" stroke="#1F3A5F" stroke-width="1.4" fill="none"/>
+  <path d="M-12,10 Q0,2 12,10" stroke="#1F3A5F" stroke-width="2" fill="none"/>
+  <text x="0" y="45" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1F3A5F">Sad</text>
+</g>
+<!-- Angry -->
+<g transform="translate(580,1170)">
+  <rect x="-90" y="-45" width="180" height="105" rx="10" fill="url(#gradRed)" stroke="#C0524F"/>
+  <circle cx="0" cy="-3" r="30" fill="#FDEBEA" stroke="#C0524F" stroke-width="1.3"/>
+  <circle cx="-10" cy="-8" r="2.6" fill="#7A2A27"/><circle cx="10" cy="-8" r="2.6" fill="#7A2A27"/>
+  <path d="M-16,-16 L-5,-11" stroke="#7A2A27" stroke-width="1.6"/>
+  <path d="M16,-16 L5,-11" stroke="#7A2A27" stroke-width="1.6"/>
+  <path d="M-12,10 Q0,3 12,10" stroke="#7A2A27" stroke-width="2" fill="none"/>
+  <text x="0" y="45" text-anchor="middle" font-size="10.5" font-weight="700" fill="#7A2A27">Angry</text>
+</g>
+<!-- Fearful -->
+<g transform="translate(790,1170)">
+  <rect x="-90" y="-45" width="180" height="105" rx="10" fill="url(#gradPurple)" stroke="#8A63C9"/>
+  <circle cx="0" cy="-3" r="30" fill="#F0E9FB" stroke="#8A63C9" stroke-width="1.3"/>
+  <circle cx="-10" cy="-8" r="4.6" fill="#FFFFFF" stroke="#4B2E83"/><circle cx="10" cy="-8" r="4.6" fill="#FFFFFF" stroke="#4B2E83"/>
+  <circle cx="-10" cy="-8" r="1.6" fill="#4B2E83"/><circle cx="10" cy="-8" r="1.6" fill="#4B2E83"/>
+  <ellipse cx="0" cy="10" rx="6" ry="8" fill="#FFFFFF" stroke="#4B2E83" stroke-width="1.4"/>
+  <text x="0" y="45" text-anchor="middle" font-size="10.5" font-weight="700" fill="#4B2E83">Fearful</text>
+</g>
+
+<!-- Row 2 faces -->
+<!-- Disgust -->
+<g transform="translate(160,1300)">
+  <rect x="-90" y="-45" width="180" height="105" rx="10" fill="url(#gradGreen)" stroke="#3F9B5C"/>
+  <circle cx="0" cy="-3" r="30" fill="#E8F7EC" stroke="#3F9B5C" stroke-width="1.3"/>
+  <path d="M-13,-9 L-6,-6 M-13,-6 L-6,-9" stroke="#1E5B34" stroke-width="1.4"/>
+  <circle cx="10" cy="-8" r="2.6" fill="#1E5B34"/>
+  <path d="M-12,8 Q-4,4 4,10 Q9,13 12,7" stroke="#1E5B34" stroke-width="2" fill="none"/>
+  <text x="0" y="45" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1E5B34">Disgust</text>
+</g>
+<!-- Neutral -->
+<g transform="translate(370,1300)">
+  <rect x="-90" y="-45" width="180" height="105" rx="10" fill="url(#gradGray)" stroke="#9CA3AF"/>
+  <circle cx="0" cy="-3" r="30" fill="#F5F6F7" stroke="#9CA3AF" stroke-width="1.3"/>
+  <circle cx="-10" cy="-8" r="2.6" fill="#4B5563"/><circle cx="10" cy="-8" r="2.6" fill="#4B5563"/>
+  <line x1="-12" y1="8" x2="12" y2="8" stroke="#4B5563" stroke-width="2"/>
+  <text x="0" y="45" text-anchor="middle" font-size="10.5" font-weight="700" fill="#374151">Neutral</text>
+</g>
+<!-- Calm -->
+<g transform="translate(580,1300)">
+  <rect x="-90" y="-45" width="180" height="105" rx="10" fill="url(#gradTeal)" stroke="#2C6E62"/>
+  <circle cx="0" cy="-3" r="30" fill="#E1F5F3" stroke="#2C6E62" stroke-width="1.3"/>
+  <path d="M-13,-8 Q-10,-6 -7,-8" stroke="#1D4D45" stroke-width="1.4" fill="none"/>
+  <path d="M13,-8 Q10,-6 7,-8" stroke="#1D4D45" stroke-width="1.4" fill="none"/>
+  <path d="M-11,8 Q0,13 11,8" stroke="#1D4D45" stroke-width="2" fill="none"/>
+  <text x="0" y="45" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1D4D45">Calm</text>
+</g>
+<!-- Surprised -->
+<g transform="translate(790,1300)">
+  <rect x="-90" y="-45" width="180" height="105" rx="10" fill="url(#gradOrange)" stroke="#E08E3E"/>
+  <circle cx="0" cy="-3" r="30" fill="#FDF0E0" stroke="#E08E3E" stroke-width="1.3"/>
+  <circle cx="-10" cy="-9" r="3.4" fill="#FFFFFF" stroke="#7A431A"/><circle cx="10" cy="-9" r="3.4" fill="#FFFFFF" stroke="#7A431A"/>
+  <circle cx="-10" cy="-9" r="1.3" fill="#7A431A"/><circle cx="10" cy="-9" r="1.3" fill="#7A431A"/>
+  <circle cx="0" cy="10" r="6" fill="#FFFFFF" stroke="#7A431A" stroke-width="1.4"/>
+  <text x="0" y="45" text-anchor="middle" font-size="10.5" font-weight="700" fill="#7A431A">Surprised</text>
+</g>
+
+<text x="500" y="1408" text-anchor="middle" class="caption" font-size="10.5">Fig. 1. Overview of the proposed multi-branch feature extraction and ensemble classification framework for speech emotion recognition.</text>
+
+</svg>
