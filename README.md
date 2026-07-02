@@ -69,6 +69,18 @@ https://www.kaggle.com/datasets/uwrfkaggler/ravdess-emotional-speech-audio
 | Sampling Rate | 48 kHz |
 
 ---
+# 🏗️ System Architecture
+
+The proposed Speech Emotion Recognition (SER) pipeline converts raw speech signals into discriminative acoustic features and classifies emotions using multiple machine learning algorithms.
+
+<p align="center">
+  <img src="ser_architecture_diagram.svg" width="1000" alt="Speech Emotion Recognition Architecture"/>
+</p>
+
+<p align="center">
+<b>Figure.</b> Proposed Speech Emotion Recognition (SER) architecture.
+</p>
+---
 
 # ⚙️ Methodology
 
@@ -187,23 +199,18 @@ This highlights the importance of improving model generalization for real-world 
 - Seaborn
 
 ---
-
 # 📂 Repository Structure
 
 ```text
 Speech-Emotion-Recognition
 │
-├── dataset/
-├── notebooks/
-├── models/
-├── audio_samples/
-├── results/
-├── requirements.txt
-├── speech_emotion_recognition.ipynb
-└── README.md
+├── 📄 README.md
+├── 📓 Speech_Emotion_Recognition.ipynb
+└── 🖼️ ser_architecture_diagram.svg
 ```
 
----
+
+
 
 # 🚀 Installation
 
